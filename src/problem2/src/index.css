@@ -1,0 +1,50 @@
+:root{
+  --white: #fff;
+  --black: #000;
+  --red: red;
+  --background-color-1: rgb(241,90,36);
+  --purple: rgb(58,55,193) ;
+  --green: rgb(61, 219, 145);
+  --orange: rgb(241, 186, 83);
+  --blue: #0ea5e9; 
+  --gray: #9e9e9e;
+  --gray--trans: rgba(158,158,158,0.3);
+  --pastel: #EF9595;
+  --nav-top-gradient:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(58,55,193,1) 100%, rgba(0,212,255,1) 100%);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-family: "Tilt Neon", sans-serif;
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden !important;
+  background-color: var(--white) !important;
+  user-select: none !important;
+}
+
+button{
+  user-select: none;
+  cursor: pointer;
+}
+
+Link, buttonm, a{
+  text-decoration: none !important;
+}
+
+button,
+input,
+[tabindex] {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}

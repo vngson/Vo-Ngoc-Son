@@ -1,0 +1,174 @@
+.App{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--black);
+}
+
+.App-header{
+  display: flex;
+  width: 100%;
+  padding: 5px 50px;
+  align-items: center;
+  background-color: var(--black);
+  border-bottom: solid 0.5px var(--white);
+  z-index: 2;
+}
+
+.App-name{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.App-header__logo{
+  width: 60px;
+  object-fit: contain;
+  /* filter: drop-shadow(0 0 10px var(--gray)); */
+}
+
+.App-header__name{
+  color: var(--white);
+  font-size: 2rem;
+  font-family: "Silkscreen", sans-serif;
+}
+
+.App-content__title{
+  color: var(--blue);
+  font-size: 2rem;
+  font-family: "Silkscreen", sans-serif;
+}
+
+.App-content{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('/public/background.jpg');
+  background-size: cover;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-size: 1.6rem;
+  /* filter: grayscale(100%); */
+}
+
+.App-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Điều chỉnh độ mờ ở đây */
+  z-index: 1;
+}
+
+.App-content > * {
+  position: relative;
+  z-index: 2;
+}
+
+.App-content__currencies_selection, .Amount_input__wrapper{
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.App-content__swap_form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 1rem;
+  border: solid 1px var(--white);
+}
+
+.swap_form__input{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  height: fit-content;
+}
+
+.select_from_currency, .select_to_currency{
+  width: 160px;
+}
+
+.Amount_input{
+  height: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  width: 160px;
+}
+
+.Convert_btn{
+  display: flex;
+  height: 100%;
+  gap: 1rem;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: var(--blue);
+  justify-content: center;
+}
+
+.swap-button{
+  display: flex;
+  height: 100%;
+  gap: 1rem;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: var(--blue);
+  justify-content: center;
+}
+
+.App-content__conversion_result{
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  min-width: 200px;
+  height: 10rem;
+  margin-bottom: 2rem;
+}
+
+.conversion_result{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (min-width: 300px) and (max-width: 960px) {
+  .swap_form__input{
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .App-content{
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .App-content__swap_form{
+    display: flex;
+    width: 100%;
+  }
+
+  .App-content__currencies_selection, .Amount_input__wrapper{
+    flex-direction: column;
+  }
+
+  .swap-button > i{
+    transform: rotate(90deg);
+  }
+}
